@@ -8,6 +8,5 @@ I'm currently taking time off from work to learn and explore topics that interes
 
 ### Sharings
 Here are some things I have written during this time. I hope you find them interesting and helpful.
-[*gameplay-attribute_modifiers*](gameplay-attribute_modifiers.md)
-
-[*favorite-books*](favorite-books.md)
+* [*gameplay-attribute_modifiers*](gameplay-attribute_modifiers.md)
+* [*favorite-books*](favorite-books.md)
