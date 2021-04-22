@@ -18,7 +18,7 @@ This is often leveraged in games that use proc-gen. Some games that come to mind
 * Hades
 
 
-So, Let's break things down and see what we can come up with.
+Let's break things down and see if we can refine how we think about this so _we_ can be generators of abilities.
 
 
 To have an 'effect' you need some 'target' that it is applied to. Not just an entity, but an attribute.
@@ -87,6 +87,40 @@ This is a surprise to me but it seems to boil down to the five W's.
 3) Where? - What area can be impacted by the modifications?
 4) When? - How does the modification interact with regard to time?
 5) Why? - Worlds need to be consistent. Think it terms of an enemy cast it, or it was triggered somehow.
+6) How? - this also relates to creating a world that "sells", for example for a root ability, you may have ice enclose the entity, or roots climb up.
 
+The last thing I want to add is don't feel limited in what attributes can be modified. Tradeoffs are fun, but keep in mind things need to be understandable. Good examples of tradeoff with abilities is the common spell "polymorphism" that heals the enemy, but any damage breaks the spell. This is quite interesting and is a great example of forcing the player to effectively combine their spells. In a multiplayer game it brings in communication.
+
+
+There's really a whole world, as games also introduce "immunity" to status effects that build up and then reset.
+
+
+Immunity is a status effect. It's not dependent on collider, but on past state. It seems that we haven't taken this into account so let's see if it fits into our "5Ws".
+
+```
+[StatusImmunity]
+who = "self"
+what = status_duration
+when = immediate
+where = on the entity
+why = repeated application of applied status
+```
+So, should the above be on a specific target, or on the actual spell?
+
+
+It seems that you would want it to be on the character. So, how does the character handle the status?
+
+
+This is starting to feel alot like signalling. It also feels like this would be wasteful of computation.
+This is the problem of "thought experiment" implementations.
+
+
+Anyways, it reminds me of something like a client & request.
+So really every ability is some form of `tgt.try_apply_status<T>()`
+This reminds me of SICP where they talk about how data is just functions and functions are just data.
+
+
+
+We didn't address stacking
 
 
