@@ -128,3 +128,4 @@ We didn't address stacking.
 There are some useful things we had here, which is some sort of filter, we have a StatusSrc and a StatusDst. Maybe we just have a `Status` that knows how to apply itself to `Dst` and does tests to see if it is `Immune` and how to build `Resistence`. `Immune` is just full `Resistance`.
 
 
+Then we get to a point where we say, "Where should we specify how to apply status?" In the dst, or in the tgt? & the trouble here is that we have different classes or whatever & they have different layout so you need some way to know how to access the thing. But if we just have a Struct of arrays does it get easier? Maybe? Maybe not? It means we don't need to have a specific impl on the character.
