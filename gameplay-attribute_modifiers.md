@@ -15,7 +15,7 @@ So what you end up seeing are combinations of a few things applied in different 
 This is often leveraged in games that use proc-gen. Some games that come to mind here are:
 * Diablo 3
 * Dead Cells
-
+* Hades
 
 
 So, Let's break things down and see what we can come up with.
