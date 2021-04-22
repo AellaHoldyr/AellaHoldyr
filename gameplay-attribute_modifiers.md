@@ -121,6 +121,10 @@ This reminds me of SICP where they talk about how data is just functions and fun
 
 
 
-We didn't address stacking
+We didn't address stacking.
+
+
+
+There are some useful things we had here, which is some sort of filter, we have a StatusSrc and a StatusDst. Maybe we just have a `Status` that knows how to apply itself to `Dst` and does tests to see if it is `Immune` and how to build `Resistence`. `Immune` is just full `Resistance`.
 
 
